@@ -12,7 +12,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template('index')
     end
     it 'Checks if users/index html elements rendered' do
-      expect(response.body).to include('USER1 data')
+      expect(response.body).to include('List of users')
     end
   end
   describe 'GET /show' do
@@ -25,7 +25,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to render_template('show')
     end
     it 'Checks if response body includes correct placeholder text' do
-      expect(response.body).to include('List of Users')
+      expect(response.body).to include('Specic User')
     end
   end
 end
