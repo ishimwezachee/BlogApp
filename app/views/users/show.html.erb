@@ -19,10 +19,10 @@
   <div class="comment-container">
       <h4>Post : <%= post.title%></h4>
       <p><%= post.text%></p>
-      <p>Comment <%= post.author.comment_ids.count%>,  <span>Likes <%= post.likes_counter%></span></p>
+      <p>Comment <%= post.author.comments_ids.count%>,  <span>Likes <%= post.likes_counter%></span></p>
   </div>
 <%end%>
 
   <button class="button">
-      <%= link_to "See all posts", user_posts_path(@user), {:class => "button_class"} %>
+      <%= link_to "See all posts", user_posts_path(@user), {:class => "button"} %>
   </button>
