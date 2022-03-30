@@ -12,19 +12,21 @@
 <div>
 <div class="comments">
 <% @comments.each do |comment| %>
-   <h2><%= comment.author.name%>: <%= comment.text%></h2>
+   <h2><%= comment.author.name%>: <%= comment.text %></h2>
 <%end%>
 </div>
 </div>
 
 <div class="likes_btn">
-<%= form_with url: "users/posts/#{@post.id}/likes", scope: :like do |form| %>
+<%= form_with url:post_likes_path(@post.id), scope: :like do |form| %>
     <%= form.submit "Like ", class: "btn"%>
   <% end %>
 </div>
 
+
+
 <div class="Add_comments">
-<%= form_with url: "users/posts/#{@post.id}/comments", scope: :comment do |form| %>
+<%= form_with url: post_comments_path(@post.id), scope: :comment do |form| %>
 <div class="comment-area">
 	<%= form.text_area :text, placeholder: "Type something here...", rows: 14, required: true %>
 	<%= form.submit "Comment", class: "button" %>

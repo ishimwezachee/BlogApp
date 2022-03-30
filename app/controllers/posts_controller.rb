@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @user = @post.author
+    # @user = @post.author
     @comments = @post.comments
   end
 
@@ -15,8 +15,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @user.find(params[:id])
-    @new_post = @user.posts.(post_params)
+    @user = User.find(params[:user_id])
+    @new_post = @user.posts.new(post_params)
     respond_to do |f|
       f.html do
         if @new_post.save
