@@ -20,9 +20,9 @@ class PostsController < ApplicationController
     respond_to do |f|
       f.html do
         if @new_post.save
-          redirect_to "/users/#{@new_post.author.id}/posts/"
+          redirect_to "/users/#{@new_post.author.id}/posts/", notice: 'post is created successfully'
         else
-          render :new, alert: 'POst failed to create'
+          render :new, alert: 'post failed to create'
         end
      end
     end
