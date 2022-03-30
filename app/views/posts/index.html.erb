@@ -1,21 +1,22 @@
-<div class="user-container">
-        <div class="user-img">
-       <img src=<%= 'https://icon-library.com/images/user-profile-icon/user-profile-icon-23.jpg' %> >
-      </div>
-      <h2><%= @user.name%></h2>
-      <p>Number of posts: <%= @user.post_ids.count %></p>
+<div class="parent">
+  <div class="user-img">
+    <img class="user_image" src=<%= 'https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425__340.png' %> >
+  </div>
+  <div class="user-info">
+      <h2 class="user_name"><%= @user.name%></h2>
+      <p  class="post_number">Number of posts: <%= @user.post_ids.count %></p>
     </div>
   </div>
 
 <% @posts.each do |post| %>
-  <div class="user-container">
-    <div class="post-data">
+  <div class="comment-box">
+    <div class="user_name">
      <%= link_to "#{post.title}", user_post_path(@user.id, post.id), class:"post-title" %> 
      <h3><%= post.text%></h3>
-      <p>Number of comments: <%= post.comments.size%> <span>Number of likes: <%= post.likes_counter %></span></p>
+      <p class="post_number">Number of comments: <%= post.comments.size%> <span>Number of likes: <%= post.likes_counter %></span></p>
     </div>
   </div>
-  <div class="commentaire">
+  <div class="sub_comment">
     <% post.recent_five_comments.each do |comment| %>
        <h4><%= comment.author.name%>: <%= comment.text%></h4>
     <%end%>

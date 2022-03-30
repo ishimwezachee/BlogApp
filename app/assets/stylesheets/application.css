@@ -8,10 +8,11 @@
 .user-info {
     border: 2px solid black;
     padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 160px;
+}
+
+.user_name{
+    margin-bottom: 5%;
 }
 
 img.user_image {
@@ -23,8 +24,44 @@ img.user_image {
 .user-bio{
     border: 2px solid black;
     margin: 11px;
+    padding: 30px 5px;
+}
+
+.post_number{
+    text-align: right;
 }
 
 .bio{
   padding: 5px;
+}
+
+.comment-box{
+    border: 2px solid black;
+    margin: 11px;
+    padding: 5px;
+}
+
+.sub_comment{
+    margin: 11px;
+    padding: 5px;
+    border:1px solid beige;
+}
+
+.length{
+    text-align: right;
+}
+
+
+.post_value{
+    border: 2px solid black;
+}
+
+.line1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comments{
+    border: 2px solid black;
 }

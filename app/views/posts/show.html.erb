@@ -1,9 +1,13 @@
-<div class="user-container">
+<div class="post_info">
 <div class="user-posts"> 
+  <div class="line1">
   <h2><%= @post.title %> by <span><%= @post.author.name %></span></h2>
-  <h3 class = "post-comment">Comment <%= @post.comments.size%>,  <span>Likes <%= @post.likes_counter%></span></h3>
-  <p><%= @post.text %></p>
-</div>
+  <p class = "post-comment">Comment <%= @post.comments.size%>,  <span>Likes <%= @post.likes_counter%></span></p>
+  </div>
+ <div>
+  <p class="post_value"><%= @post.text %></p>
+ </div>
+</>
 </div>
 <div>
 <div class="comments">
