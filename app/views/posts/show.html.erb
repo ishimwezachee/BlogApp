@@ -16,3 +16,18 @@
 <%end%>
 </div>
 </div>
+
+<div class="likes_btn">
+<%= form_with url: "users/posts/#{@post.id}/likes", scope: :like do |form| %>
+    <%= form.submit "Like ", class: "btn"%>
+  <% end %>
+</div>
+
+<div class="Add_comments">
+<%= form_with url: "users/posts/#{@post.id}/comments", scope: :comment do |form| %>
+<div class="comment-area">
+	<%= form.text_area :text, placeholder: "Type something here...", rows: 14, required: true %>
+	<%= form.submit "Comment", class: "button" %>
+  </div>
+<% end %>
+</div>
