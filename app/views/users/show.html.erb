@@ -1,14 +1,14 @@
-<div class="user-container">
+<div class="parent">
   <div class="user-img">
-    <img src=<%= 'https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425__340.png' %> >
+    <img class="user_image" src=<%= 'https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425__340.png' %> >
   </div>
-  <div class="user-data">
+  <div class="user-info">
     <h2><%= @user.name%></h2>
     <p>Number of posts: <%= @user.post_ids.count %></p>
   </div>
 </div>
 
-<div class="user-container-2">
+<div class="user-bio">
   <div class="user-data-2">
     <h2>Bio</h2>
     <p class="bio"><%= @user.bio%></p>

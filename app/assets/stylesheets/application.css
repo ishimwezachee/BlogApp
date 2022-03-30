@@ -6,13 +6,25 @@
 }
 
 .user-info {
-    border: 1px solid black;
-    padding: 30px;
+    border: 2px solid black;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    height: 160px;
 }
 
 img.user_image {
     width: 80%;
+    height: 160px;
+    border: 2px solid black;
+}
+
+.user-bio{
+    border: 2px solid black;
+    margin: 11px;
+}
+
+.bio{
+  padding: 5px;
 }
