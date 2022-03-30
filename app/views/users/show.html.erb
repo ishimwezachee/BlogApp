@@ -1,1 +1,28 @@
-<h1>Specic User</h1>
+<div class="user-container">
+  <div class="user-img">
+    <img src=<%= 'https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425__340.png' %> >
+  </div>
+  <div class="user-data">
+    <h2><%= @user.name%></h2>
+    <p>Number of posts: <%= @user.post_ids.count %></p>
+  </div>
+</div>
+
+<div class="user-container-2">
+  <div class="user-data-2">
+    <h2>Bio</h2>
+    <p class="bio"><%= @user.bio%></p>
+  </div>
+</div>
+
+<% @user.recent_posts.each do |post| %>
+  <div class="comment-container">
+      <h4>Post : <%= post.title%></h4>
+      <p><%= post.text%></p>
+      <p>Comment <%= post.author.comment_ids.count%>,  <span>Likes <%= post.likes_counter%></span></p>
+  </div>
+<%end%>
+
+  <button class="button">
+      <%= link_to "See all posts", user_posts_path(@user), {:class => "button_class"} %>
+  </button>
