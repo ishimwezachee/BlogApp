@@ -6,62 +6,61 @@
 }
 
 .user-info {
-    border: 2px solid black;
-    padding: 0 20px;
-    height: 160px;
+  border: 2px solid black;
+  padding: 0 20px;
+  height: 160px;
 }
 
-.user_name{
-    margin-bottom: 5%;
+.user_name {
+  margin-bottom: 5%;
 }
 
 img.user_image {
-    width: 80%;
-    height: 160px;
-    border: 2px solid black;
+  width: 80%;
+  height: 160px;
+  border: 2px solid black;
 }
 
-.user-bio{
-    border: 2px solid black;
-    margin: 11px;
-    padding: 30px 5px;
+.user-bio {
+  border: 2px solid black;
+  margin: 11px;
+  padding: 30px 5px;
 }
 
-.post_number{
-    text-align: right;
+.post_number {
+  text-align: right;
 }
 
-.bio{
+.bio {
   padding: 5px;
 }
 
-.comment-box{
-    border: 2px solid black;
-    margin: 11px;
-    padding: 5px;
+.comment-box {
+  border: 2px solid black;
+  margin: 11px;
+  padding: 5px;
 }
 
-.sub_comment{
-    margin: 11px;
-    padding: 5px;
-    border:1px solid beige;
+.sub_comment {
+  margin: 11px;
+  padding: 5px;
+  border: 1px solid beige;
 }
 
-.length{
-    text-align: right;
+.length {
+  text-align: right;
 }
 
-
-.post_value{
-    border: 2px solid black;
+.post_value {
+  border: 2px solid black;
 }
 
-.line1{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.line1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.comments{
-    border: 2px solid black;
+.comments {
+  border: 2px solid black;
 }
