@@ -1,7 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+
   describe 'Created user' do
+
+
     subject { User.new(name: 'user_name', photo: 'sample.png', bio: 'Teacher from Mexico.', post_counter: 3) }
 
     before { subject.save }

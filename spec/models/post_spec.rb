@@ -32,13 +32,10 @@ RSpec.describe Post, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'Should retun the update post' do
-    expect(Post.count).to eq 0   
-  end
-
   describe 'Should test methods in post model' do
     it 'Should retun the recent five comments' do
       expect(subject.recent_five_comments).to eq(subject.comments.last(5))
     end
   end
 end
+
