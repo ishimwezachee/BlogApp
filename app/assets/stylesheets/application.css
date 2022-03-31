@@ -86,9 +86,36 @@ textarea#post_text{
   font-size: 15px;
 }
 
-input.submit-btn{
+input.submit-btn {
   width: 41rem;
   border-radius: 10px;
   padding: 10px;
   font-size: 20px;
 }
+
+.like_div{
+  text-align: right;
+  margin: 20px;
+}
+
+.like_btn,.comment_btn{
+border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  width: 90px;
+}
+
+.mother{
+  width: 50%;
+  margin: auto;
+}
+
+textarea#comment_text {
+  width: 62rem;
+  border-radius: 10px;
+  outline: none;
+}
+.create_comment{
+  display: block;
+}
+

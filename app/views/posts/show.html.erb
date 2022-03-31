@@ -1,3 +1,4 @@
+<div class="mother">
 <div class="post_info">
 <div class="user-posts"> 
   <div class="line1">
@@ -19,17 +20,20 @@
 
 <div class="likes_btn">
 <%= form_with url:post_likes_path(@post.id), scope: :like do |form| %>
-    <%= form.submit "Like ", class: "btn"%>
+<div class="like_div">
+    <%= form.submit "Like", class: "like_btn"%>
+    </div>
   <% end %>
 </div>
 
-
-
-<div class="Add_comments">
+<div class="create_comment">
 <%= form_with url: post_comments_path(@post.id), scope: :comment do |form| %>
 <div class="comment-area">
 	<%= form.text_area :text, placeholder: "Type something here...", rows: 14, required: true %>
-	<%= form.submit "Comment", class: "button" %>
+	<div class="like_div">
+  <%= form.submit "Comment", class: "comment_btn" %>
+  </div>
   </div>
 <% end %>
+</div>
 </div>
