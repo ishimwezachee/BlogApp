@@ -64,3 +64,59 @@ img.user_image {
 .comments {
   border: 2px solid black;
 }
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input#post_title {
+  width: 41rem;
+  height: 2rem;
+  border-radius: 10px;
+  margin: 20px;
+  font-size: 15px;
+}
+
+textarea#post_text {
+  width: 41rem;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+input.submit-btn {
+  width: 41rem;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.like_div {
+  text-align: right;
+  margin: 20px;
+}
+
+.like_btn,
+.comment_btn {
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  width: 90px;
+}
+
+.mother {
+  width: 50%;
+  margin: auto;
+}
+
+textarea#comment_text {
+  width: 62rem;
+  border-radius: 10px;
+  outline: none;
+}
+
+.create_comment {
+  display: block;
+}

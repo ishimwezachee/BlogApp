@@ -1,2 +1,13 @@
-<h1>Specific User</h1>
 
+<%= form_with model: @post, url: user_posts_path, method: :post, local: true, scope: :post do |f| %>
+   <div class="input_field">
+    <div class="post_input">            
+        <%= f.text_field :title, placeholder: "Title", required: true %>
+    </div>
+    <div class="post_text_area">
+        <%= f.text_area :text, placeholder: "Type here...", rows: 20, required: true %>
+    </div>
+     <%= f.submit "Post", class: "submit-btn" %>
+    </div>
+   
+<% end %>
