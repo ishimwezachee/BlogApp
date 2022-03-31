@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     respond_to do |f|
       f.html do
         if @new_post.save
-          flash[:notice] = "Saved successfully"
+          flash[:notice] = 'Saved successfully'
           redirect_to "/users/#{@new_post.author.id}/posts/"
         else
           flash[:error] = 'Failed to create, try again!'
