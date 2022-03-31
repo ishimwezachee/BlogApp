@@ -2,11 +2,13 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   first_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
-  subject { Post.create(author_id:first_user,title: 'Hello', text: 'This is my post', comment_counter:5,likes_counter:3) }
+  subject do
+    Post.create(author_id: first_user, title: 'Hello', text: 'This is my post', comment_counter: 5, likes_counter: 3)
+  end
 
   before { subject.save }
 
-  it "check post validation with valid attributes" do
+  it 'check post validation with valid attributes' do
     expect(subject).to_not be_valid
   end
 
@@ -21,8 +23,8 @@ RSpec.describe Post, type: :model do
   end
 
   it 'comment_couter greater than zero' do
-      subject.comment_counter  = 0
-      expect(subject).to_not be_valid
+    subject.comment_counter = 0
+    expect(subject).to_not be_valid
   end
 
   it 'Like_couter greater than zero' do
@@ -33,9 +35,6 @@ RSpec.describe Post, type: :model do
   it 'Should retun the update post' do
     expect(Post.count).to eq 0
   end
-
-
-
 
   describe 'Should test methods in post model' do
     it 'Should retun the recent five comments' do

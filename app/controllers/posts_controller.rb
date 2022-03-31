@@ -19,10 +19,10 @@ class PostsController < ApplicationController
     respond_to do |f|
       f.html do
         if @new_post.save
-          redirect_to "/users/#{@new_post.author.id}/posts/", flash:{alert:"Post is created successfully"}
+          redirect_to "/users/#{@new_post.author.id}/posts/", flash: { alert: 'Post is created successfully' }
         else
           flash.now[:error] = 'Failed to create Post'
-          render action:'new'
+          render action: 'new'
         end
       end
     end
