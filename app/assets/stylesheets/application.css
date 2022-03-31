@@ -64,3 +64,31 @@ img.user_image {
 .comments {
   border: 2px solid black;
 }
+
+.input_field{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+input#post_title {
+  width: 41rem;
+  height: 2rem;
+  border-radius: 10px;
+  margin: 20px;
+  font-size: 15px;
+}
+
+textarea#post_text{
+  width: 41rem;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+input.submit-btn{
+  width: 41rem;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
