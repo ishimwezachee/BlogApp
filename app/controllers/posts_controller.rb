@@ -6,7 +6,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    # @user = @post.author
     @comments = @post.comments
   end
 
@@ -20,9 +19,10 @@ class PostsController < ApplicationController
     respond_to do |f|
       f.html do
         if @new_post.save
-          redirect_to "/users/#{@new_post.author.id}/posts/", notice: 'post is created successfully'
+          redirect_to "/users/#{@new_post.author.id}/posts/", flash:{alert:"Post is created successfully"}
         else
-          render :new, alert: 'post failed to create'
+          flash.now[:error] = 'Failed to create Post'
+          render action:'new'
         end
       end
     end
