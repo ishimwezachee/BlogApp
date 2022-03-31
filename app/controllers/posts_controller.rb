@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     @comments = @post.comments
   end
 
-  def new 
+  def new
     @post = Post.new
   end
 
@@ -24,12 +24,11 @@ class PostsController < ApplicationController
         else
           render :new, alert: 'post failed to create'
         end
-     end
+      end
     end
   end
 
   def post_params
     params.require(:post).permit(:title, :text)
   end
-
 end
