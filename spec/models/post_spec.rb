@@ -33,7 +33,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'Should retun the update post' do
-    expect(Post.count).to eq 0   
+    expect(Post.count).to eq 0
   end
 
   describe 'Should test methods in post model' do
