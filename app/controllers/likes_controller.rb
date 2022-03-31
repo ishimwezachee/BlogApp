@@ -7,9 +7,10 @@ class LikesController < ApplicationController
     )
     like.update_like_counter
     if like.save
-      redirect_to "/users/#{@post.author_id}/posts/#{@post.id}", flash: { alert: 'Like is created successfully' }
+      flash[:notice] = 'Saved successfully'
     else
-      redirect_to "/users/#{@post.author_id}/posts/#{@post.id}", flash.now[:error] = 'Failed to create Like'
+      flash[:error] = 'Failed to create, try again!'
     end
+    redirect_to "/users/#{@post.author_id}/posts/#{@post.id}"
   end
 end

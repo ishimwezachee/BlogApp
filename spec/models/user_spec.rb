@@ -12,7 +12,7 @@ RSpec.describe User, type: :model do
 
     it 'name should be present' do
       subject.name = nil
-      expect(subject).to be_valid
+      expect(subject).to_not be_valid
     end
 
     it 'photo should be present' do
