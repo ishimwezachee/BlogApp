@@ -15,7 +15,7 @@ RSpec.describe 'User #Show', type: :feature do
             fill_in 'Password', with: '123456'
             click_button 'Log in'
             @posta = Post.create(title: 'first', text: 'Hello1', comment_counter: 0, likes_counter: 0, author: @userA)
-            @postb = Post.create(title: 'Second', text: 'Hello2', comment_counter: 0, likes_counter: 0, author: @userA)
+            @postb = Post.create(title: 'second', text: 'Hello2', comment_counter: 0, likes_counter: 0, author: @userA)
             @postc = Post.create(title: 'third', text: 'Hello3', comment_counter: 0, likes_counter: 0, author: @userA)
             @postd = Post.create(title: 'fourth', text: 'Hello4', comment_counter: 0, likes_counter: 0, author: @userA)
             visit user_path(@userA.id)
@@ -43,14 +43,18 @@ RSpec.describe 'User #Show', type: :feature do
           end
 
 
-        #   it "show user's first 3 posts." do
-        #     expect(page).to have_content('first')
-        #   end
+          it "show user's first 3 posts." do
+            visit(user_posts_path(@userA.id))
+            expect(page).to have_content('first')
+            expect(page).to have_content('second')
+            expect(page).to have_content('third')
+          end
 
-        #   it "click see all posts and redirects to user's post's index page." do
-        #     click_button 'See all posts'
-        #     expect(page).to have_current_path user_posts_path('/')
-        #   end
+          it "click see all posts and redirects to user's post's index page." do
+            click_button 'See all posts'
+            visit(user_posts_path(@userA.id))
+            expect(page).to have_current_path user_posts_path(@userA)
+          end
         
     end
 end
