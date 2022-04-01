@@ -120,3 +120,42 @@ textarea#comment_text {
 .create_comment {
   display: block;
 }
+
+.login, .signup,.confirm,.forget,.change_pass {
+  background-color: #77E4D4;
+  width: 50rem;
+  margin: auto;
+  text-align: center;
+  color:#FBF46D;
+}
+
+#user_email,#user_password,#user_name,#user_password_confirmation {
+  width: 30rem;
+  height: 2rem;
+  margin: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 9rem;
+  height: 2rem;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.field label{
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.signup_link a,
+.forget_pss a,
+.confirmation a,
+.log a{
+  text-decoration: none;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
