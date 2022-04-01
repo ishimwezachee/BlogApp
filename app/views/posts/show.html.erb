@@ -13,7 +13,12 @@
 <div>
 <div class="comments">
 <% @comments.each do |comment| %>
+<div class="comment">
    <h2><%= comment.author.name%>: <%= comment.text %></h2>
+   </div>
+<% if can? :destroy, comment %>
+       <%= button_to "Delete Comment", "/users/:author_id/posts/#{params[:id]}",  :method => :delete, class: "del" %>
+      <% end %>
 <%end%>
 </div>
 </div>
