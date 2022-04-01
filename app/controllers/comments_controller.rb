@@ -22,8 +22,6 @@ class CommentsController < ApplicationController
     redirect_to "/users/#{@post.author_id}/posts/#{@post.id}"
   end
 
-
-
   def destroy
     comment = Comment.find(params[:id])
     authorize! :destroy, comment
@@ -32,6 +30,7 @@ class CommentsController < ApplicationController
   end
 
   private
+
   def comment_params
     params.require(:comment).permit(:text)
   end
