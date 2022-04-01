@@ -2,9 +2,9 @@ require 'rails_helper'
 
 describe 'user index page tests', type: :feature do
   before :each do
-    @userA = User.create(name: 'userA', bio: 'Writer', email: 'usera@example.com', password: '123456', post_counter: 0,
+    @usera = User.create(name: 'userA', bio: 'Writer', email: 'usera@example.com', password: '123456', post_counter: 0,
                          confirmed_at: Time.now)
-    @userB = User.create(name: 'userB', bio: 'footballer', email: 'userb@example.com', password: 'helloworld',
+    @userb = User.create(name: 'userB', bio: 'footballer', email: 'userb@example.com', password: 'helloworld',
                          post_counter: 0, confirmed_at: Time.now)
   end
 

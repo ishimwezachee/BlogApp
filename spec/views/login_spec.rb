@@ -1,4 +1,5 @@
 require 'rails_helper'
+
 RSpec.feature 'Logins', type: :feature do
   background { visit new_user_session_path }
 
@@ -9,6 +10,10 @@ RSpec.feature 'Logins', type: :feature do
   it 'display Password field' do
     expect(page).to have_field('user[password]')
   end
+end
+
+RSpec.feature 'Logins', type: :feature do
+  background { visit new_user_session_path }
 
   it 'Display Login' do
     expect(page).to have_content 'Log in'
