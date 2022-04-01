@@ -2,8 +2,10 @@ require 'rails_helper'
 
 describe 'user index page tests', type: :feature do
   before :each do
-    @userA = User.create(name: 'userA', bio: 'Writer', email: 'usera@example.com', password: '123456',post_counter: 0, confirmed_at: Time.now)
-    @userB = User.create(name: 'userB', bio: 'footballer', email: 'userb@example.com', password: 'helloworld',post_counter: 0, confirmed_at: Time.now)
+    @userA = User.create(name: 'userA', bio: 'Writer', email: 'usera@example.com', password: '123456', post_counter: 0,
+                         confirmed_at: Time.now)
+    @userB = User.create(name: 'userB', bio: 'footballer', email: 'userb@example.com', password: 'helloworld',
+                         post_counter: 0, confirmed_at: Time.now)
   end
 
   it 'shows username of the first user' do
@@ -46,7 +48,7 @@ describe 'user index page tests', type: :feature do
     expect(page).to have_css('img')
   end
 
-    it 'show the number of post value for the first user ' do
+  it 'show the number of post value for the first user ' do
     visit root_path
     within('body') do
       fill_in 'Email', with: 'usera@example.com'
