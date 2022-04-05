@@ -1,0 +1,44 @@
+<div class="mother">
+<div class="post_info">
+<div class="user-posts"> 
+  <div class="line1">
+  <h2><%= @post.title %> by <span><%= @post.author.name %></span></h2>
+  <p class = "post-comment">Comment <%= @post.comments.size%>,  <span>Likes <%= @post.likes_counter%></span></p>
+  </div>
+ <div>
+  <p class="post_value"><%= @post.text %></p>
+ </div>
+</>
+</div>
+<div>
+<div class="comments">
+<% @comments.each do |comment| %>
+<div class="comment">
+   <h2><%= comment.author.name%>: <%= comment.text %></h2>
+   </div>
+<% if can? :destroy, comment %>
+       <%= button_to "Delete Comment", "/users/:author_id/posts/#{params[:id]}",  :method => :delete, class: "del" %>
+      <% end %>
+<%end%>
+</div>
+</div>
+
+<div class="likes_btn">
+<%= form_with url:post_likes_path(@post.id), scope: :like do |form| %>
+<div class="like_div">
+    <%= form.submit "Like", class: "like_btn"%>
+    </div>
+  <% end %>
+</div>
+
+<div class="create_comment">
+<%= form_with url: post_comments_path(@post.id), scope: :comment do |form| %>
+<div class="comment-area">
+	<%= form.text_area :text, placeholder: "Type something here...", rows: 14, required: true %>
+	<div class="like_div">
+  <%= form.submit "Comment", class: "comment_btn" %>
+  </div>
+  </div>
+<% end %>
+</div>
+</div>

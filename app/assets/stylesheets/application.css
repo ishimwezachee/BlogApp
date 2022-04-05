@@ -1,0 +1,167 @@
+.parent {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+.user-info {
+  border: 2px solid black;
+  padding: 0 20px;
+  height: 160px;
+}
+
+.user_name {
+  margin-bottom: 5%;
+}
+
+img.user_image {
+  width: 80%;
+  height: 160px;
+  border: 2px solid black;
+}
+
+.user-bio {
+  border: 2px solid black;
+  margin: 11px;
+  padding: 30px 5px;
+}
+
+.post_number {
+  text-align: right;
+}
+
+.bio {
+  padding: 5px;
+}
+
+.comment-box {
+  border: 2px solid black;
+  margin: 11px;
+  padding: 5px;
+}
+
+.sub_comment {
+  margin: 11px;
+  padding: 5px;
+  border: 1px solid beige;
+}
+
+.length {
+  text-align: right;
+}
+
+.post_value {
+  border: 2px solid black;
+}
+
+.line1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments {
+  border: 2px solid black;
+}
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input#post_title {
+  width: 41rem;
+  height: 2rem;
+  border-radius: 10px;
+  margin: 20px;
+  font-size: 15px;
+}
+
+textarea#post_text {
+  width: 41rem;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+input.submit-btn {
+  width: 41rem;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.like_div {
+  text-align: right;
+  margin: 20px;
+}
+
+.like_btn,
+.comment_btn {
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  width: 90px;
+}
+
+.mother {
+  width: 50%;
+  margin: auto;
+}
+
+textarea#comment_text {
+  width: 62rem;
+  border-radius: 10px;
+  outline: none;
+}
+
+.create_comment {
+  display: block;
+}
+
+.login,
+.signup,
+.confirm,
+.forget,
+.change_pass {
+  background-color: #77e4d4;
+  width: 50rem;
+  margin: auto;
+  text-align: center;
+  color: #fbf46d;
+}
+
+#user_email,
+#user_password,
+#user_name,
+#user_password_confirmation {
+  width: 30rem;
+  height: 2rem;
+  margin: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 9rem;
+  height: 2rem;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.field label {
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.signup_link a,
+.forget_pss a,
+.confirmation a,
+.log a {
+  text-decoration: none;
+  font-size: 15px;
+  font-family: sans-serif;
+}
